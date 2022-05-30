@@ -1,0 +1,392 @@
+@Misc{CanvasDocs,
+  howpublished = {\url{https://developer.android.com/jetpack/compose/graphics}},
+  note         = {(Accessed on 05/11/2022)},
+  title        = {Graphics in Compose  |  Jetpack Compose  |  Android Developers},
+}
+
+@Misc{SwiftUIDocs,
+  howpublished = {\url{https://swiftuidocs.com/}},
+  note         = {(Accessed on 03/22/2022)},
+  title        = {Start Here | SwiftUI Docs},
+}
+
+@Misc{FlutterDocs,
+  howpublished = {\url{https://flutter.dev/?gclid=Cj0KCQjw5-WRBhCKARIsAAId9FlramzMX_7zkLf412pU8-ThIuAnTSCBXm7M9v3rTzX5UuLRui6JXecaAvhHEALw_wcB&gclsrc=aw.ds}},
+  note         = {(Accessed on 03/22/2022)},
+  title        = {Flutter - Build apps for any screen},
+}
+
+@TechReport{Wu2018,
+  author      = {Wenhao Wu},
+  institution = {Metropolia University of Applied Sciences},
+  title       = {React Native vs Flutter, cross-platform mobileapplication frameworks},
+  year        = {2018},
+  url         = {https://www.theseus.fi/bitstream/handle/10024/146232/thesis.pdf?sequence=1},
+}
+
+@Misc{FuchsiaDocs,
+  howpublished = {\url{https://fuchsia.dev/}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {Fuchsia},
+}
+
+@Misc{DartDocs,
+  howpublished = {\url{https://dart.dev/}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {Dart programming language | Dart},
+}
+
+@Misc{FlutterFAQ,
+  howpublished = {\url{https://docs.flutter.dev/resources/faq}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {FAQ | Flutter},
+}
+
+@Misc{LLVMDocs,
+  howpublished = {\url{https://llvm.org/}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {The LLVM Compiler Infrastructure Project},
+}
+
+@Misc{SkiaDocs,
+  howpublished = {\url{https://skia.org/}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {Skia},
+}
+
+@Misc{DartFAQ,
+  howpublished = {\url{https://dart.dev/faq}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {FAQ | Dart},
+}
+
+@Misc{FlutterAPI,
+  howpublished = {\url{https://api.flutter.dev/flutter/widgets/ListView-class.html}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {ListView class - widgets library - Dart API},
+}
+
+@Misc{SwiftDocs,
+  howpublished = {\url{https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html}},
+  note         = {(Accessed on 03/24/2022)},
+  title        = {The Basics — The Swift Programming Language (Swift 5.6)},
+}
+
+@Misc{SwiftGithub,
+  howpublished = {\url{https://github.com/apple/swift}},
+  note         = {(Accessed on 03/24/2022)},
+  title        = {apple/swift: The Swift Programming Language},
+}
+
+@Article{Abdulrasool2020,
+  author  = {Saleem Abdulrasool},
+  journal = {Swift. Org},
+  title   = {Introducing Swift on Windows},
+  year    = {2020},
+  url     = {https://www.swift.org/blog/swift-on-windows/},
+}
+
+@Book{Sillmann2020,
+  author    = {Thomas Sillmann},
+  publisher = {Hanser},
+  title     = {Das Swift Handbuch. Apps programmieren für macOS, iOS, watchOS und tvOS},
+  year      = {2020},
+  url       = {https://stayhome.hanser-kundencenter.de/media/pdf/22/82/ab/Swift-Handbuch_Update-4_SwiftUI_Teil_1.pdf},
+}
+
+@Thesis{Danielsson2016,
+  author = {William Danielsson},
+  school = {Linköpings universitet},
+  title  = {React Native application development: A comparison between native Android and React Native},
+  url    = {https://www.diva-portal.org/smash/get/diva2:998793/FULLTEXT02.pdf},
+  year   = {2016},
+}
+
+@Article{Fedosojev2015,
+  author  = {Artemij Fedosojev},
+  journal = {PACKT publishing},
+  title   = {React.js Essentials},
+  year    = {2015},
+  url     = {https://github.com/divyanshu-rawat/js-worth-read/blob/master/React.js Essentials.pdf},
+}
+
+@Misc{V8Docs,
+  howpublished = {\url{https://android.googlesource.com/platform/external/v8/.}},
+  note         = {(Accessed on 03/25/2022)},
+  title        = {platform/external/v8 - Git at Google},
+}
+
+@TechReport{PekkaKetola2000,
+  author      = {Pekka Ketola, et. al.},
+  institution = {Personal Technologies},
+  title       = {Coping with Consistencg under HuttipteDesign Constraints: The Case of the Nokia9000 WWW Browser},
+  year        = {2000},
+}
+
+@Article{Pothitos2016,
+  author  = {Adam Pothitos},
+  journal = {Opinion},
+  title   = {Mobile Industry Review: News and opinion for industry executives and mobile fanatics},
+  year    = {2016},
+  url     = {https://www.academia.edu/31841333/The_History_of_the_Smartphone_Mobile_Industry_Review},
+}
+
+@Misc{OeillySymbian,
+  howpublished = {\url{https://www.oreilly.com/library/view/developing-software-for/9780470725702/ch04.html}},
+  note         = {(Accessed on 03/28/2022)},
+  title        = {4. Symbian OS Programming Basics - Developing Software for Symbian OS: A Beginner's Guide to Creating Symbian OS v9 Smartphone Applications in C++ [Book]},
+}
+
+@Misc{SymbianDocs,
+  howpublished = {\url{https://symbianfoundation.org/}},
+  note         = {(Accessed on 03/28/2022)},
+  title        = {Symbian Foundation – Symbian is a mobile operating system designed for smartphones},
+}
+
+@Book{AlmudenaDiazZayas2010,
+  author    = {Almudena Díaz Zayas, et. al.},
+  editor    = {prof. dr hab. inz. Andrzej Pach},
+  publisher = {Scanrail - Fotolia.com},
+  title     = {Programming for Symbian OS},
+  year      = {2010},
+}
+
+@Book{Krajci2013,
+  author    = {Iggy Krajci and Darren Cummings},
+  editor    = {Jeffrey Pepper and Stuart Douglas},
+  publisher = {Apress open},
+  title     = {Android on x86: An Introduction to Optimizing for Intel Architecture},
+  year      = {2013},
+}
+
+@Misc{MobileOSStatistics,
+  howpublished = {\url{https://de.statista.com/statistik/daten/studie/184335/umfrage/marktanteil-der-mobilen-betriebssysteme-weltweit-seit-2009/}},
+  note         = {(Accessed on 03/29/2022)},
+  title        = {Mobile Betriebssysteme - Marktanteile Internetnutzung weltweit bis Januar 2022 | Statista},
+}
+
+@Misc{Desktopv59:online,
+  howpublished = {\url{https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/worldwide}},
+  note         = {(Accessed on 03/29/2022)},
+  title        = {Desktop vs Mobile vs Tablet Market Share Worldwide | Statcounter Global Stats},
+}
+
+@Misc{ComposeSummit,
+  howpublished = {\url{https://www.youtube.com/watch?v=Q9MtlmmN4Q0}},
+  note         = {(Accessed on 03/30/2022)},
+  title        = {Understanding Compose (Android Dev Summit '19) - YouTube},
+}
+
+@Misc{AndroidD83:online,
+  howpublished = {\url{https://android-developers.googleblog.com/2021/07/jetpack-compose-announcement.html}},
+  note         = {(Accessed on 03/30/2022)},
+  title        = {Android Developers Blog: Jetpack Compose is now 1.0: announcing Android’s modern toolkit for building native UI},
+}
+
+@Misc{AndroidXmlLayouts,
+  howpublished = {\url{https://developer.android.com/guide/topics/ui/declaring-layout}},
+  note         = {(Accessed on 03/31/2022)},
+  title        = {Layouts  |  Android Developers},
+}
+
+@Misc{WpfXML,
+  howpublished = {\url{https://docs.microsoft.com/en-us/dotnet/desktop/wpf/xaml/?view=netdesktop-6.0}},
+  note         = {(Accessed on 04/01/2022)},
+  title        = {XAML overview - WPF .NET | Microsoft Docs},
+}
+
+@TechReport{Kharisma2008,
+  author      = {Awal Kharisma},
+  institution = {Academia},
+  title       = {What is Android?},
+  year        = {2008},
+  url         = {https://d1wqtxts1xzle7.cloudfront.net/30551848/andoid--tech-with-cover-page-v2.pdf?Expires=1648923543&Signature=eIr5HvbhCZt~T9uweaM7W~01LSSOQxXr7SBjljAk9HxBFgONYbf6KYRW0b-e0YDgmuxVhEFCMsEiS-gR3Npj-uHNQ19JNtW3H7AXPgRXl96eYKL1atQuW0lMN1t5VnkE3Rrx9cKK5IzatXiJbTzXL5rWwuR1X6Q7tKg2iShD1nyS4SDlxWlbE-irIb5l2ooS6PZ4G6t4TToTdZ7GC5h6meYkKDRcbrQY9LYPA5DTSBDoUhzrgEN1HRH4cHlHsS7E9Uj8oeoXj~qeoPvVEAYJ99LaN~5OFMc7w3shO2vckqmXGFoCjdoFSIY8cHo3uZADmf7SztDOTUT7G9J0280ddA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA},
+}
+
+@Misc{AndroidKernelDownload,
+  howpublished = {\url{https://source.android.com/setup/build/building-kernels}},
+  note         = {(Accessed on 04/03/2022)},
+  title        = {Building Kernels  |  Android Open Source Project},
+}
+
+@Misc{AndroidPlatformArchitecture,
+  howpublished = {\url{https://developer.android.com/guide/platform}},
+  note         = {(Accessed on 04/04/2022)},
+  title        = {Platform Architecture  |  Android Developers},
+}
+
+@Misc{LocationManager,
+  howpublished = {\url{https://developer.android.com/reference/android/location/LocationManager}},
+  note         = {(Accessed on 04/04/2022)},
+  title        = {LocationManager  |  Android Developers},
+}
+
+@Misc{WatchKitDocu,
+  howpublished = {\url{https://developer.apple.com/documentation/watchkit}},
+  note         = {(Accessed on 04/05/2022)},
+  title        = {WatchKit | Apple Developer Documentation},
+}
+
+@Misc{AppKitDocu,
+  howpublished = {\url{https://developer.apple.com/documentation/appkit}},
+  note         = {(Accessed on 04/05/2022)},
+  title        = {AppKit | Apple Developer Documentation},
+}
+
+@Misc{UIKitDocu,
+  howpublished = {\url{https://developer.apple.com/documentation/uikit}},
+  note         = {(Accessed on 04/05/2022)},
+  title        = {UIKit | Apple Developer Documentation},
+}
+
+@Misc{ChinaStandheizungAmazon,
+  howpublished = {\url{https://www.amazon.de/maXpeedingrods-Luftheizung-Standheizung-Diesel-Wohnmobil/dp/B07N63XV4S/ref=sr_1_6?keywords=china+standheizung&qid=1649171057}},
+  note         = {(Accessed on 04/05/2022)},
+  title        = {maXpeedingrods 12V Diesel Standheizung Luftheizung Air Diesel 5KW Für Wohnmobil Auto KFZ PKW LKW : Amazon.de: Auto \& Motorrad},
+}
+
+@Misc{RetrofitDocs,
+  howpublished = {\url{https://square.github.io/retrofit/}},
+  note         = {(Accessed on 04/06/2022)},
+  title        = {Retrofit},
+}
+
+@Misc{AndroidD66:online,
+  howpublished = {\url{https://android-developers.googleblog.com/2022/02/jetpack-compose-11-now-stable.html}},
+  note         = {(Accessed on 05/02/2022)},
+  title        = {Android Developers Blog: Jetpack Compose 1.1 is now stable!},
+  url          = {https://android-developers.googleblog.com/2022/02/jetpack-compose-11-now-stable.html},
+}
+
+@Misc{ActivitiesDocs,
+  howpublished = {\url{https://developer.android.com/guide/components/activities/intro-activities}},
+  note         = {(Accessed on 05/03/2022)},
+  title        = {Introduction to Activities  |  Android Developers},
+}
+
+@Misc{ActivityAttributeList,
+  howpublished = {\url{https://developer.android.com/guide/topics/manifest/activity-element}},
+  note         = {(Accessed on 05/03/2022)},
+  title        = {<activity>  |  Android Developers},
+}
+
+@Misc{FragmentDocs,
+  howpublished = {\url{https://developer.android.com/guide/fragments}},
+  note         = {(Accessed on 05/04/2022)},
+  title        = {Fragments  |  Android Developers},
+}
+
+@Misc{JetpackComposeArchitecture,
+  howpublished = {\url{https://developer.android.com/jetpack/compose/layering}},
+  note         = {(Accessed on 05/04/2022)},
+  title        = {Jetpack Compose architectural layering  |  Android Developers},
+}
+
+@Misc{NavigationDocs,
+  howpublished = {\url{https://developer.android.com/guide/navigation/navigation-getting-started}},
+  note         = {(Accessed on 05/05/2022)},
+  title        = {Get started with the Navigation component  |  Android Developers},
+}
+
+@Misc{ButtonDocs,
+  howpublished = {\url{https://developer.android.com/guide/topics/ui/controls/button}},
+  note         = {(Accessed on 05/06/2022)},
+  title        = {Buttons  |  Android Developers},
+}
+
+@Misc{ComposableDocs,
+  howpublished = {\url{https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable}},
+  note         = {(Accessed on 05/06/2022)},
+  title        = {Composable  |  Android Developers},
+}
+
+@Misc{NavigationDocsCompose,
+  howpublished = {\url{https://developer.android.com/jetpack/compose/navigation}},
+  note         = {(Accessed on 05/06/2022)},
+  title        = {Navigating with Compose  |  Jetpack Compose  |  Android Developers},
+}
+
+@Misc{ModifierDocs,
+  howpublished = {\url{https://developer.android.com/jetpack/compose/modifiers}},
+  note         = {(Accessed on 05/07/2022)},
+  title        = {Compose modifiers  |  Jetpack Compose  |  Android Developers},
+}
+
+@Misc{LayoutsComposeDocs,
+  howpublished = {\url{https://developer.android.com/jetpack/compose/layouts/basics}},
+  note         = {(Accessed on 05/07/2022)},
+  title        = {Compose layout basics  |  Jetpack Compose  |  Android Developers},
+}
+
+@Misc{modifierList,
+  howpublished = {\url{https://developer.android.com/jetpack/compose/modifiers-list}},
+  note         = {(Accessed on 05/11/2022)},
+  title        = {List of Compose modifiers  |  Jetpack Compose  |  Android Developers},
+}
+
+@Misc{AnimationXMLDocs,
+  howpublished = {\url{https://developer.android.com/guide/topics/resources/animation-resource}},
+  note         = {(Accessed on 05/13/2022)},
+  title        = {Animation resources  |  Android Developers},
+}
+
+@Misc{ApacheLicense,
+  howpublished = {\url{https://www.apache.org/licenses/LICENSE-2.0}},
+  note         = {(Accessed on 05/26/2022)},
+  title        = {Apache License, Version 2.0},
+}
+
+@Book{Bailey2021,
+  author    = {Thomas Bailey},
+  publisher = {Packt Publishing Ltd.},
+  title     = {Flutter for Beginners},
+  year      = {2021},
+  url       = {https://books.google.at/books?id=7qZJEAAAQBAJ},
+}
+
+@Misc{GoogleIO2019,
+  howpublished = {\url{https://developer.android.com/kotlin/first}},
+  note         = {(Accessed on 05/26/2022)},
+  title        = {Android’s Kotlin-first approach  |  Android Developers},
+}
+
+@Misc{xmlStandard,
+  howpublished = {\url{https://www.w3.org/TR/xml/}},
+  note         = {(Accessed on 05/26/2022)},
+  title        = {Extensible Markup Language (XML) 1.0 (Fifth Edition)},
+}
+
+@Misc{ViewModeDocs,
+  howpublished = {\url{https://developer.android.com/topic/libraries/architecture/viewmodel}},
+  note         = {(Accessed on 05/27/2022)},
+  title        = {ViewModel Overview  |  Android Developers},
+}
+
+@Article{,
+}
+
+@Misc{StateCompose,
+  howpublished = {\url{https://developer.android.com/jetpack/compose/state}},
+  note         = {(Accessed on 05/27/2022)},
+  title        = {State and Jetpack Compose  |  Android Developers},
+}
+
+@Misc{ArrangementCompose,
+  howpublished = {\url{https://developer.android.com/reference/kotlin/androidx/compose/foundation/layout/Arrangement}},
+  note         = {(Accessed on 05/27/2022)},
+  title        = {Arrangement  |  Android Developers},
+}
+
+@Misc{InteropComposeXML,
+  howpublished = {\url{https://developer.android.com/jetpack/compose/interop/interop-apis}},
+  note         = {(Accessed on 05/27/2022)},
+  title        = {Interoperability APIs  |  Jetpack Compose  |  Android Developers},
+}
+
+@Misc{CamperStatistic,
+  howpublished = {\url{https://caravanstats.com.au/wp-content/uploads/2020/12/2020-Caravan-and-Campervan-Data-Report.pdf}},
+  note         = {(Accessed on 05/27/2022)},
+  title        = {https://caravanstats.com.au/wp-content/uploads/2020/12/2020-Caravan-and-Campervan-Data-Report.pdf},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

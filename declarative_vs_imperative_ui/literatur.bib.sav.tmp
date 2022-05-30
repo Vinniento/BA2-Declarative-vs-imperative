@@ -1,0 +1,213 @@
+@Misc{CanvasDocs,
+  howpublished = {\url{https://developer.android.com/jetpack/compose/graphics}},
+  note         = {(Accessed on 05/11/2022)},
+  title        = {Graphics in Compose  |  Jetpack Compose  |  Android Developers},
+}
+
+@Misc{SwiftUIDocs,
+  howpublished = {\url{https://swiftuidocs.com/}},
+  note         = {(Accessed on 03/22/2022)},
+  title        = {Start Here | SwiftUI Docs},
+}
+
+@Misc{FlutterDocs,
+  howpublished = {\url{https://flutter.dev/?gclid=Cj0KCQjw5-WRBhCKARIsAAId9FlramzMX_7zkLf412pU8-ThIuAnTSCBXm7M9v3rTzX5UuLRui6JXecaAvhHEALw_wcB&gclsrc=aw.ds}},
+  note         = {(Accessed on 03/22/2022)},
+  title        = {Flutter - Build apps for any screen},
+}
+
+@TechReport{Wu2018,
+  author      = {Wenhao Wu},
+  institution = {Metropolia University of Applied Sciences},
+  title       = {React Native vs Flutter, cross-platform mobileapplication frameworks},
+  year        = {2018},
+  url         = {https://www.theseus.fi/bitstream/handle/10024/146232/thesis.pdf?sequence=1},
+}
+
+@Misc{FuchsiaDocs,
+  howpublished = {\url{https://fuchsia.dev/}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {Fuchsia},
+}
+
+@Misc{DartDocs,
+  howpublished = {\url{https://dart.dev/}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {Dart programming language | Dart},
+}
+
+@Misc{FlutterFAQ,
+  howpublished = {\url{https://docs.flutter.dev/resources/faq}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {FAQ | Flutter},
+}
+
+@Misc{LLVMDocs,
+  howpublished = {\url{https://llvm.org/}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {The LLVM Compiler Infrastructure Project},
+}
+
+@Misc{SkiaDocs,
+  howpublished = {\url{https://skia.org/}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {Skia},
+}
+
+@Misc{DartFAQ,
+  howpublished = {\url{https://dart.dev/faq}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {FAQ | Dart},
+}
+
+@Misc{FlutterAPI,
+  howpublished = {\url{https://api.flutter.dev/flutter/widgets/ListView-class.html}},
+  note         = {(Accessed on 03/23/2022)},
+  title        = {ListView class - widgets library - Dart API},
+}
+
+@Misc{SwiftDocs,
+  howpublished = {\url{https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html}},
+  note         = {(Accessed on 03/24/2022)},
+  title        = {The Basics — The Swift Programming Language (Swift 5.6)},
+}
+
+@Misc{SwiftGithub,
+  howpublished = {\url{https://github.com/apple/swift}},
+  note         = {(Accessed on 03/24/2022)},
+  title        = {apple/swift: The Swift Programming Language},
+}
+
+@Article{Abdulrasool2020,
+  author  = {Saleem Abdulrasool},
+  journal = {Swift. Org},
+  title   = {Introducing Swift on Windows},
+  year    = {2020},
+  url     = {https://www.swift.org/blog/swift-on-windows/},
+}
+
+@Book{Sillmann2020,
+  author    = {Thomas Sillmann},
+  publisher = {Hanser},
+  title     = {Das Swift Handbuch. Apps programmieren für macOS, iOS, watchOS und tvOS},
+  year      = {2020},
+  url       = {https://stayhome.hanser-kundencenter.de/media/pdf/22/82/ab/Swift-Handbuch_Update-4_SwiftUI_Teil_1.pdf},
+}
+
+@Thesis{Danielsson2016,
+  author = {William Danielsson},
+  school = {Linköpings universitet},
+  title  = {React Native application development: A comparison between native Android and React Native},
+  url    = {https://www.diva-portal.org/smash/get/diva2:998793/FULLTEXT02.pdf},
+  year   = {2016},
+}
+
+@Article{Fedosojev2015,
+  author  = {Artemij Fedosojev},
+  journal = {PACKT publishing},
+  title   = {React.js Essentials},
+  year    = {2015},
+  url     = {https://github.com/divyanshu-rawat/js-worth-read/blob/master/React.js Essentials.pdf},
+}
+
+@Misc{V8Docs,
+  howpublished = {\url{https://android.googlesource.com/platform/external/v8/.}},
+  note         = {(Accessed on 03/25/2022)},
+  title        = {platform/external/v8 - Git at Google},
+}
+
+@TechReport{PekkaKetola2000,
+  author      = {Pekka Ketola, et. al.},
+  institution = {Personal Technologies},
+  title       = {Coping with Consistencg under HuttipteDesign Constraints: The Case of the Nokia9000 WWW Browser},
+  year        = {2000},
+}
+
+@Article{Pothitos2016,
+  author  = {Adam Pothitos},
+  journal = {Opinion},
+  title   = {Mobile Industry Review: News and opinion for industry executives and mobile fanatics},
+  year    = {2016},
+  url     = {https://www.academia.edu/31841333/The_History_of_the_Smartphone_Mobile_Industry_Review},
+}
+
+@Misc{OeillySymbian,
+  howpublished = {\url{https://www.oreilly.com/library/view/developing-software-for/9780470725702/ch04.html}},
+  note         = {(Accessed on 03/28/2022)},
+  title        = {4. Symbian OS Programming Basics - Developing Software for Symbian OS: A Beginner's Guide to Creating Symbian OS v9 Smartphone Applications in C++ [Book]},
+}
+
+@Misc{SymbianDocs,
+  howpublished = {\url{https://symbianfoundation.org/}},
+  note         = {(Accessed on 03/28/2022)},
+  title        = {Symbian Foundation – Symbian is a mobile operating system designed for smartphones},
+}
+
+@Book{AlmudenaDiazZayas2010,
+  author    = {Almudena Díaz Zayas, et. al.},
+  editor    = {prof. dr hab. inz. Andrzej Pach},
+  publisher = {Scanrail - Fotolia.com},
+  title     = {Programming for Symbian OS},
+  year      = {2010},
+}
+
+@Book{Krajci2013,
+  author    = {Iggy Krajci and Darren Cummings},
+  editor    = {Jeffrey Pepper and Stuart Douglas},
+  publisher = {Apress open},
+  title     = {Android on x86: An Introduction to Optimizing for Intel Architecture},
+  year      = {2013},
+}
+
+@Misc{MobileOSStatistics,
+  howpublished = {\url{https://de.statista.com/statistik/daten/studie/184335/umfrage/marktanteil-der-mobilen-betriebssysteme-weltweit-seit-2009/}},
+  note         = {(Accessed on 03/29/2022)},
+  title        = {Mobile Betriebssysteme - Marktanteile Internetnutzung weltweit bis Januar 2022 | Statista},
+}
+
+@Misc{Desktopv59:online,
+  howpublished = {\url{https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/worldwide}},
+  note         = {(Accessed on 03/29/2022)},
+  title        = {Desktop vs Mobile vs Tablet Market Share Worldwide | Statcounter Global Stats},
+}
+
+@Misc{ComposeSummit,
+  howpublished = {\url{https://www.youtube.com/watch?v=Q9MtlmmN4Q0}},
+  note         = {(Accessed on 03/30/2022)},
+  title        = {Understanding Compose (Android Dev Summit '19) - YouTube},
+}
+
+@Misc{AndroidD83:online,
+  howpublished = {\url{https://android-developers.googleblog.com/2021/07/jetpack-compose-announcement.html}},
+  note         = {(Accessed on 03/30/2022)},
+  title        = {Android Developers Blog: Jetpack Compose is now 1.0: announcing Android’s modern toolkit for building native UI},
+}
+
+@Misc{AndroidXmlLayouts,
+  howpublished = {\url{https://developer.android.com/guide/topics/ui/declaring-layout}},
+  note         = {(Accessed on 03/31/2022)},
+  title        = {Layouts  |  Android Developers},
+}
+
+@Misc{WpfXML,
+  howpublished = {\url{https://docs.microsoft.com/en-us/dotnet/desktop/wpf/xaml/?view=netdesktop-6.0}},
+  note         = {(Accessed on 04/01/2022)},
+  title        = {XAML overview - WPF .NET | Microsoft Docs},
+}
+
+@TechReport{Kharisma2008,
+  author      = {Awal Kharisma},
+  institution = {Academia},
+  title       = {What is Android?},
+  year        = {2008},
+  url         = {https://d1wqtxts1xzle7.cloudfront.net/30551848/andoid--tech-with-cover-page-v2.pdf?Expires=1648923543&Signature=eIr5HvbhCZt~T9uweaM7W~01LSSOQxXr7SBjljAk9HxBFgONYbf6KYRW0b-e0YDgmuxVhEFCMsEiS-gR3Npj-uHNQ19JNtW3H7AXPgRXl96eYKL1atQuW0lMN1t5VnkE3Rrx9cKK5IzatXiJbTzXL5rWwuR1X6Q7tKg2iShD1nyS4SDlxWlbE-irIb5l2ooS6PZ4G6t4TToTdZ7GC5h6meYkKDRcbrQY9LYPA5DTSBDoUhzrgEN1HRH4cHlHsS7E9Uj8oeoXj~qeoPvVEAYJ99LaN~5OFMc7w3shO2vckqmXGFoCjdoFSIY8cHo3uZADmf7SztDOTUT7G9J0280ddA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA},
+}
+
+@Misc{AndroidKernelDownload,
+  howpublished = {\url{https://source.android.com/setup/build/building-kernels}},
+  note         = {(Accessed on 04/03/2022)},
+  title        = {Building Kernels  |  Android Open Source Project},
+}
+
+@Misc{AndroidPlatformArchitecture,
+  howpublished = {\url

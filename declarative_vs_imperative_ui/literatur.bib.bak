@@ -362,7 +362,10 @@
   title        = {ViewModel Overview  |  Android Developers},
 }
 
-@Article{,
+@Misc{AnimationComposeDocs,
+  howpublished = {\url{https://developer.android.com/jetpack/compose/animation}},
+  note         = {(Accessed on 05/28/2022)},
+  title        = {Animation  |  Jetpack Compose  |  Android Developers},
 }
 
 @Misc{StateCompose,
@@ -387,6 +390,15 @@
   howpublished = {\url{https://caravanstats.com.au/wp-content/uploads/2020/12/2020-Caravan-and-Campervan-Data-Report.pdf}},
   note         = {(Accessed on 05/27/2022)},
   title        = {https://caravanstats.com.au/wp-content/uploads/2020/12/2020-Caravan-and-Campervan-Data-Report.pdf},
+}
+
+@Misc{WPFIntroDocs,
+  howpublished = {\url{https://docs.microsoft.com/en-us/dotnet/desktop/wpf/getting-started/introduction-to-wpf-in-vs?view=netframeworkdesktop-4.8}},
+  note         = {(Accessed on 06/01/2022)},
+  title        = {Introduction to WPF in Visual Studio | Microsoft Docs},
+}
+
+@Article{,
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

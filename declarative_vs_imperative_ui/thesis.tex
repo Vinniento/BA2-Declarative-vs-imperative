@@ -224,6 +224,7 @@ APK & Android Package (Kit) \\
  MVC & Model-View-Controller \\
  SDK & Standard Development Kit \\
  UI & User Interface \\
+UX & User Experience \\
  VM & Virtual Machine \\
  XML & Extensible Markup Language 			
 		
@@ -456,8 +457,7 @@ As is visible in the code example above, the annotation \lstinline!@Composable! 
 \section{Summary}
 This chapter started with a little history of smartphones and app development in general. How smartphones and their applications evolved from - at least from today's standpoint - very basic and primitive technology, to very complex frameworks. These frameworks aid developers to bring all kinds of complex and creative app ideas to life, in a way that the apps are maintainable and preferably scalable. \newline
 
-To sum up this chapter, a summary and comparison of the frameworks will be made here.\newline
-Starting with the imperative frameworks, Apple's UI Development kit and XML. Under the hood, Apple's frameworks also use XML files to structure the UI but can manipulate It using a GUI. The same applies to classical Android development.\newline
+Starting with the imperative frameworks, Apple's UI Development kit and XML. Under the hood, Apple's frameworks also use XML files to structure the UI but can manipulate it using a GUI. The same applies to classical Android development. It then continued with the declarative frameworks, which - for the most part - do not depend on XML structures. Instead, they integrate the UI element declarations directly in the code. An exception to this rule is the WPF framework from Microsoft \cite{WPFIntroDocs}. This uses an adapted version of XML - XAML - to declare the UI elements.\newline
 
 \chapter{UI development in Android}\label{ui_dev_android}
 This chapter starts with a brief recAPItulation of some basic information about Android and its history. It will then go on to explain the architectural stack and finally go on to a deep dive into the comparison of Jetpack Compose and XML UI development in Android. Here the differences between the two approaches will be compared in great detail, ranging from the simple difference in how to create a view, all the way to how animations and other features are implemented. All of this is illustrated with a working Android app, where the features are being implemented. The feature list will not be an exhaustive list of all possible configurations but will give a good insight into how the two ways of creating Android apps differ. To create a context for the features being implemented, the app itself will be explained in section \ref{app explanation}.
@@ -648,7 +648,7 @@ The higher one gets in the abstraction layers, the more control is been given up
 
 
 \section{Example Application: Parking Heater Control App}\label{app explanation}
-The Jetpack Compose application developed for this thesis is a fully functioning app to control the heating system in parking heaters used in camping vans. The reasoning behind choosing this as a project is that in recent years there has been a huge increase in demand for camping vans \cite{CamperStatistic}. From people buying fully converted vans, to those who convert them themselves. Many vans include a heating system, which either works with diesel or gas. There are other systems, but these are the most common. When travelling with camping vans - especially in winter - the van itself is icy cold inside and it can take up to 20-30 minutes until the heating system starts warming up the van to a comfortable temperature. Many heating systems allow for scheduled run times but in my experience, it is not always foreseeable when one will return to the van. This is the reason why I decided to create an application that allows the user to control their heating system from anywhere, as long as they have an internet connection on their phone and in their van. This way the user could switch on the heating system 30-40 minutes before returning to the van and arrive when it is around room temperature. The purpose of the app is also to have a simple but usable application which illustrates the newly introduced Jetpack Compose framework. \newline
+The Jetpack Compose application developed for this thesis is an app to control the heating system in parking heaters used in camping vans. The reasoning behind choosing this as a project is that in recent years there has been a huge increase in demand for camping vans \cite{CamperStatistic}. From people buying fully converted vans, to those who convert them themselves. Many vans include a heating system, which either works with diesel or gas. There are other systems, but these are the most common. When travelling with camping vans - especially in winter - the van itself is below zero inside and it can take up to 20-30 minutes until the heating system starts warming up the van to a comfortable temperature. Many heating systems allow for scheduled run times but it is not always foreseeable when one will return to the van. This is the reason why this application was chosen, that allows the user to control their heating system from anywhere, as long as they have an internet connection on their phone and in their van. This way the user could switch on the heating system 30-40 minutes before returning to the van and arrive when it is around room temperature. The purpose of the app is also to have a simple but usable application which illustrates the newly introduced Jetpack Compose framework. \newline
 
 For this thesis, only the Android app was developed. A microcontroller and a REST API, with which the app communicates were not developed out of time constraints. The making of these components is not part of the thesis though. From here onward the app is simply referred to as ''Heater app'' or ''HeaterApp''. As far as UI complexity goes, the Heater app is not particularly complex but includes some features discussed in the following sections. The architecture of the app itself is discussed in section \ref{heater_architecture}.
 
@@ -670,19 +670,19 @@ Notice that all arrows in figure \ref{heater_app_system_architecture} are bidire
 
 
 \subsection{App Architecture}
-As visible in figure \ref{heater_app_architecture} the app itself is pretty simple. There are two screens. The HomeScreen is the first screen that appears when opening the app. From there the user can navigate to the SettingScreen to adjust the heater configuration - more on that later. The HomeScreen is the only entry point to the app. What used to be the fragments in the XML approach, are now called screens. The screens communicate with the ViewModel, due to the reasons explained in section \ref{navigation_xml}. The ViewModels then in turn communicate with the repository, which gets its data from the API. The API is the module which sends the REST requests to the microcontroller located in the van, which retrieves its data from a temperature sensor.
+Figure \ref{heater_app_architecture} is a representation of the app architecture. There are two screens. The HomeScreen is the first screen that appears when opening the app. From there the user can navigate to the SettingScreen to adjust the heater configuration - more on that later. The HomeScreen is the only entry point to the app. What used to be the fragments in the XML approach, are now called screens. The screens communicate with the ViewModel, due to the reasons explained in section \ref{navigation_xml}. The ViewModels then in turn communicate with the repository, which gets its data from the API. The API is the module which sends the REST requests to the microcontroller located in the van, which retrieves its data from a temperature sensor.
 \begin{figure}[!ht]
 \centerline{\includegraphics[scale=0.75]{resources_qu/pictures/app_architecture.jpg}}
 \caption{Heater App Architecture}
 \label{heater_app_architecture}
 \end{figure}
 \section{Creating Apps with Jetpack Compose}\label{jetpack_compose_gui}
-This section will cover the basic workflows, modules and approaches needed to create an app with Jetpack Compose. There will not be any deep dives into any one of the subjects, but a general overview of a fair few of them. When possible, it will be explained with code from the HeaterApp. The emphasis of this section is to showcase the different approaches taken when making apps with the declarative Jetpack Compose library as opposed to the imperative XML approach.
+This section will cover the basic workflows, modules and approaches needed to create an app with Jetpack Compose. There will not be any deep dives into any of the subjects, but a general overview of some of them. When possible, it will be explained with code from the HeaterApp. The emphasis of this section is to showcase the different approaches taken when making apps with the declarative Jetpack Compose library as opposed to the imperative XML approach.
 
 \subsection{Composable functions}\label{composables}
 As mentioned in section \ref{jetpack_compose_introduction}, Jetpack Compose, or just Compose, takes an entirely different approach to creating the GUI of an application. Instead of the imperative way of declaring what one would like and how to achieve it, the developer only needs to declare what is desired. Imperative UI development does not necessarily have to entail writing out every aspect of an element oneself. It does however point to a paradigm, which separates the prototype/model of the application's UI and focuses on the what instead of the why. To illustrate a direct comparison between Compose and XML Android development, the following shows how a button is created in Compose. This can be compared to the example XML button shown in section \ref{button_xml_example}.\newline
 
-The code below in listing \ref{composeButton} is a typical way to create a UI element in Compose. The annotation \lstinline!@Composable! changes the behaviour of the function. Functions and or expressions annotated with this can only be called from within another Composable. By annotating a function with \lstinline!@Composable!, implicitly at least, the composable context gets passed into it. This makes it possible to call these composable functions somewhere else, without having to bind to an object first or get the id. It is a standalone callable function. \cite{ComposableDocs}. \newline
+The code in listing \ref{composeButton} is a typical way to create a UI element in Compose. The annotation \lstinline!@Composable! changes the behaviour of the function. Functions and or expressions annotated with this can only be called from within another Composable. By annotating a function with \lstinline!@Composable!, implicitly at least, the composable context gets passed into it. This makes it possible to call these composable functions somewhere else, without having to bind to an object first or get the id. It is a standalone callable function. \cite{ComposableDocs}. \newline
 
 \begin{lstlisting}[caption={Button in Jetpack Compose}, ,captionpos=b,label=composeButton]
 @Composable
@@ -696,7 +696,7 @@ Text(text = "Send")
 As is visible, there is a lot less code required to instantiate and make use of a button in Compose.
 
 Composable functions can also take other composables as an argument, like the composable function with the header of \lstinline!fun MainContent(content: @Composable() () -> Unit)!. This argument can then be called inside the \lstinline!MainContent! function. This feature allows for highly modular and reusable UI code.\newline
-A fairly typical paradigm of how the UI code is structured is by creating a package called \lstinline!components! and adding all custom composables here. These composables can then be called from somewhere else in the project and therefore duplicate code is avoided. Any function that emits a UI element, is a composable function. As previously mentioned, composable functions can only be called within a composable function. This means that all UI building blocks, such as buttons, are composables too.\newline
+A fairly typical paradigm of how the UI code is structured is by creating a package called \lstinline!components! and adding all custom composables here. These composables can then be reused in the project and therefore duplicate code is avoided. Any function that emits a UI element, is a composable function. As previously mentioned, composable functions can only be called within a composable function. This means that all UI building blocks, such as buttons, are composables too.\newline
 
 Like in the XML approach, there are layouts in Compose also. Although they are used for the same purpose - to structure the UI elements -, they are simpler to integrate into the UI. What each layout does is pretty self-explanatory. What is often hard though, especially in the beginning, is to know how to arrange and combine them to optimally get the desired result. The standard layouts are:
 
@@ -724,11 +724,11 @@ Here the names are similar but subtly different.
 
 \end{itemize}
 
-The reason it is called \lstinline!VerticalArrangement! in the column and \lstinline!VerticalArrangement! in a row, is that arrangement is always respective to the main axis of the layout. Whereas alignment is used to control the spacing of children in the cross axis \cite{ArrangementCompose}.\newline
+The reason it is called \lstinline!VerticalArrangement! in the column and \lstinline!VerticalAlignment! in a row, is that arrangement is always respective to the main axis of the layout. Whereas alignment is used to control the spacing of children in the cross axis \cite{ArrangementCompose}.\newline
 
-Although there are other layout types too, such as responsive layouts and slot based layouts. These will not be part of this thesis though.
+Although there are other layout types too, such as responsive layouts and slot based layouts. These will not be part of this thesis.
 
-It is worth mentioning though, that it is not mandatory to use layouts. Composables can be completely free-standing as well. In order to give the elements a structure though, layouts are used \cite{LayoutsComposeDocs}.
+It is worth mentioning, that it is not mandatory to use layouts. Composables can be completely free-standing as well. In order to give the elements a structure, layouts are used \cite{LayoutsComposeDocs}.
 
 \subsection{Modifiers}\label{modifier}
 
@@ -743,7 +743,7 @@ The use of modifiers is a heavily implemented feature in Compose. Every composab
 \item etc. The list goes on.
 \end{itemize}
 
-When looking through the library code of the modifiers, it is visible that a vast majority of the modifier functionality is based on extension methods. Every extension method in turn returns a new modifier. This makes it possible to chain many modifier methods together. An example of this would be the width modifier in the size library class. The extension method for setting the width of a composable looks like this: \lstinline!fun Modifier.width(width: Dp) = this.then(....){...}!. What the method does is concatenate two modifiers with each other. This means that modifier methods can be chained together, like so:
+When looking through the library code of the modifiers, it is visible that a vast majority of the modifier functionality is based on extension methods. Every extension method in turn returns a new modifier. This makes it possible to chain many modifier methods together. An example of this would be the width modifier in the size library class. The extension method for setting the width of a composable looks like this: \lstinline!fun Modifier.width(width: Dp) = this.then(....){...}!. What the method does is concatenate two modifiers with each other. This means that modifier methods can be chained together, shown in listing \ref{composeText}:
 \begin{lstlisting}[caption={Text in Jetpack Compose}, ,captionpos=b,label=composeText]
 Text(
 text = "MyTextField",
@@ -753,11 +753,11 @@ modifier = Modifier
 .fillMaxWidth()
 )
 \end{lstlisting}
-This example illustrates not only that multiple methods of a modifier can be chained together but also that any composable can be made clickable. Although Kotlin supports named arguments, it is still best practice for the modifier to be the first argument after the primary argument. The primary argument refers to the argument necessary for the composable to function. \newline
+This example illustrates not only that multiple methods of a modifier can be chained together but also that any composable can be made clickable. Although Kotlin supports named arguments, it is still best practice for the modifier to be the first argument after the primary argument. The primary argument refers to the argument necessary for the composable to function.
 
-Since each chain makes changes to the modifier, the order of the modifier methods matters greatly. This needs to be taken into account, for example when making an area clickable. If the padding of an element is put before the clickable method, only the non-padded area of the UI element is clickable. \newline
+Since each chain makes changes to the modifier, the order of the modifier methods matters greatly. This needs to be taken into account, for example when making an area clickable. If the padding of an element is put before the clickable method, only the non-padded area of the UI element is clickable.
 
-As was visible in the code example above, the height argument takes a dp value as an argument. This does not need to be an Int though, but could also well be a Float, Double, etc. Ultimately though they will all be converted to a Float value. Dp stands for density-independent pixels and is used in all measurements for UI sizes, except for fonts. Fonts use Scalable pixels (sp).\newline
+As was visible in the code example in listing \ref{composeText}, the height argument takes a dp value as an argument. This does not need to be an Int though, but could also well be a Float, Double, etc. Ultimately though they will all be converted to a Float value. Dp stands for density-independent pixels and is used in all measurements for UI sizes, except for fonts. Fonts use Scalable pixels (sp).
 
 Due to composables often being nested within one another, there are certain modifier functions that only work, when applying them in nested - or child - composables. An example of this would be \lstinline{.matchParentSize()}. For a full list of all modifiers including their scope, \cite{modifierList} is the official documentation for this \cite{ModifierDocs}.
 
@@ -779,20 +779,20 @@ Although this is the proposed method, one is by no means limited to a simple \ls
 
 A keyword that is often used when talking about state is \lstinline!mutableStateOf!. This creates an \lstinline!MutableState<T>! object which can be observed and is integrated within the compose runtime. \lstinline!MutableState<T>! is an interface which inherits from \lstinline!State<T>! and has a variable \lstinline!value!. Whenever the value changes, it will schedule a recomposition of any composable that accesses it. There are three ways to declare an object of this interface but because they are all equivalent to each other, only one will be illustrated: \lstinline!val myMutableState = remember { mutableStateOf("") }!. This creates an object with the default value of an empty string. Although this is the default way of holding states, Jetpack Compose is not limited to only using this interface. As long as an observable is converted to \lstinline!State<T>! it can be used equivalently. Common observable types that ship with functions to convert them to \lstinline!State<T>! are LiveData, Flow and RxJava2.\newline
 
-Whenever the UI logic involved multiple elements and goes beyond a simple composable call, it is good practice to delegate the state to a so-called state holder. This state holder holds the UI logic and UI elements' state, whereas the composable is solely responsible for emitting the UI elements. Although it is possible to make any class a state holder ViewModels are a good way of going about it. As mentioned in section \ref{navigation_xml} the utilization of ViewModels is a good idea because they outlive configuration changes. ViewModels are also a special state holder class. They are a single source of truth for all UI states and at the same time the layer between different layers, such as databases and API calls and the presentation layer. To make a class a ViewModel, it simply needs to inherit from \lstinline!ViewModel()!. This ViewModel can then be instantiated in a composable in multiple different ways to access the state and logic. This being said, it is possible to have the ViewModel with the logic and a separate class for holding the state \cite{StateCompose}.
+Whenever the UI logic involves multiple elements and goes beyond a simple composable call, it is good practice to delegate the state to a so-called state holder. This state holder holds the UI logic and UI elements' state, whereas the composable is solely responsible for emitting the UI elements. Although it is possible to make any class a state holder ViewModels are a good way of going about it. As mentioned in section \ref{navigation_xml} the utilization of ViewModels is a good idea because they outlive configuration changes. ViewModels are also a special state holder class. They are a single source of truth for all UI states and at the same time the layer between different layers, such as databases and API calls and the presentation layer. To make a class a ViewModel, it simply needs to inherit from \lstinline!ViewModel()!. This ViewModel can then be instantiated in a composable in multiple different ways to access the state and logic. This being said, it is possible to have the ViewModel with the logic and a separate class for holding the state \cite{StateCompose}.
 
 \subsection{Animations}
-Animations are a big part of many apps. They make transitions between different UI elements feel natural and easy on the eyes. Jetpack Compose comes with a set of animation APIs. Each API is designed for a different purpose. Compose provides many of the APIs as composable functions. These can then be used lust like other UI elements, such as layouts. Google provides a very helpful diagram on their animation documentation site which helps developers choose what API is needed. This can be found at \cite{AnimationComposeDocs}. In general, there are 5 different questions that one needs to ask when deciding which API to pick. Depending on the answer, there are then multiple different options.
+Animations are a big part of many apps. They make transitions between different UI elements feel natural and a overall better UX. Jetpack Compose comes with a set of animation APIs. Each API is designed for a different purpose. Compose provides many of the APIs as composable functions. These can then be used lust like other UI elements, such as layouts. Google provides a very helpful diagram on their animation documentation site which helps developers choose what API is needed. This can be found at \cite{AnimationComposeDocs}. In general, there are 5 different questions that one needs to ask when deciding which API to pick. Depending on the answer, there are then multiple different options.
 \begin{enumerate}
-\item Am i animating content change? -> AnimatedVisibility, Crossfade, AnimatedContent
+\item Is content change being animated? -> AnimatedVisibility, Crossfade, AnimatedContent
 \item Is the animation state-based? -> rememberInfiniteTransition, updateTransition, animateAsState
-\item Do I require fine control over animation time? -> TargetBasedAnimation or DecayAnimation
+\item Is fine control over animation time required? -> TargetBasedAnimation or DecayAnimation
 \item Is the animation the only source of truth? -> Animatable
-\item Are non of the above applicable? -> AnimationState or animate \cite{AnimationComposeDocs}
+\item Is non of the above applicable? -> AnimationState or animate \cite{AnimationComposeDocs}
 
 \end{enumerate}
 
-To put this into context, listing \ref{heaterSliderAnimationt} is a small example of animation from the heater app. Here the animateColorAsState API is used. It has 2 mandatory arguments:
+To put this into context, listing \ref{heaterSliderAnimationt} is a small example of animation from the heater app. Here the animateColorAsState API is used because it is used to change the colour of a circular slider. It has 2 mandatory arguments:
 \begin{enumerate}
 \item \lstinline!targetValue! which sets the colour that should be animated towards
 
@@ -821,7 +821,7 @@ There are many more animation types, APIs and features that Jetpack Compose has 
 \subsection{Navigation}\label{navigation}
 The navigation aspect of things has changed drastically also. The team at Google has made the navigation very similar to what one would typically use in web development, by employing the paradigm of routes. This will be explained a little later in this section. The basic components, such as NavHost and NavGraph are still the same but have been slightly abstracted and extended. The way it is used - from a developer's standpoint - has changed also. The navigation component is represented by a composable function, which has a reference to the NavHost. This is also a composable function. The destinations themselves are then added by invoking a function called \lstinline!composable!. This function is an extension function of the NavGraphBuilder. By invoking it, the destination - with all its arguments - gets added to the NavGraph. Compared to the previous way of writing Android apps though, there is no graphical way of creating a NavGraph. This makes sense, because there are no individual fragments like before, but instead (many) composable functions in different files, which represent the different screens. \newline
 
-To put all this theory in to practise, listing \ref{heaterNavHost} is the NavHost from the HeaterApp with two destinations, \lstinline!HomeScreen! and \lstinline!SettingScreen! Both do not take any arguments though. If they were to take arguments, the argument name would be appended in the \lstinline!composable! constructor, such as \lstinline!composable(Screens.HomeScreen.name/{name})!. In the use case of the HeaterApp though, it is not necessary. This is also the comparison to web development that was mentioned at the beginning of this section. In web development it is very common to write routes, as if they were URLs.
+To put all this theory into practice, listing \ref{heaterNavHost} is the NavHost from the HeaterApp with two destinations, \lstinline!HomeScreen! and \lstinline!SettingScreen! Both do not take any arguments. If they were to take arguments, the argument name would be appended in the \lstinline!composable! constructor, such as \lstinline!composable(Screens.HomeScreen.name/{name})!. In the use case of the HeaterApp though, it is not necessary. This is also the comparison to web development that was mentioned at the beginning of this section. In web development, it is very common to write routes, as if they were URLs.
 
 \begin{lstlisting}[caption={Heater App NavHost}, ,captionpos=b,label=heaterNavHost]
 NavHost(
@@ -834,7 +834,7 @@ HomeScreen(navController)
 
 \end{lstlisting}
 
-The screen names on the other hand come from an enum class \lstinline!Screens!. This class looks like the following. First two enums are created and a companion object which has \lstinline!Screens! as a return type. The \lstinline!substringBefore! method is called on the route, to only get the destination name, without the arguments passed.
+The screen names on the other hand come from an enum class \lstinline!Screens!. This class looks like the following. The first two enums are created and a companion object which has \lstinline!Screens! as a return type. The \lstinline!substringBefore! method is called on the route, to only get the destination name, without the arguments passed.
 
 \begin{lstlisting}[caption={Heater App NavHost}, ,captionpos=b,label=heaterAppScreens]
 
@@ -852,7 +852,9 @@ else -> throw IllegalArgumentException("Route $route is not recognized")
 
 \end{lstlisting}
 
-When wanting to navigate to a destination, for example by clicking a settings icon, the code for the navigation itself looks like this: \lstinline!navController.navigate(route = Screens.SettingScreen.name)!. The reference to the NavController needs to be retrieved beforehand. This navigation event can be embedded in an \lstinline!onClick! event of an UI element \cite{NavigationDocsCompose}.
+When wanting to navigate to a destination, for example by clicking a settings icon, the code for the navigation itself looks like this: \lstinline!navController.navigate(route = Screens.SettingScreen.name)!. The reference to the NavController needs to be retrieved beforehand. This navigation event can be embedded in an \lstinline!onClick! event of an UI element \cite{NavigationDocsCompose}.\newline
+
+Having covered the basics of Jetpack Compose navigation, it should be mentioned, that the route Google took with this approach is heavily criticized. Previously the library SafeArgs could be used to automatically create classes for all of the navigation routes with their arguments. Jetpack Compose uses strings. Using strings as arguments makes it necessary to introduce enums, which adds a layer of complexity to the architecture. An article mentioning this drawback is mentioned in \cite{ComposeNavigationDrawback}.
 
 \subsection{Canvas}
 One pain of the old approach of writing Android apps, that Compose aims to rectify, is the drawing of custom UIs on the screen. This can range from a custom box on the screen in a specific place to a highly complex arrangement of various UI elements in many different styles. An example of this would be a custom logo, like the Instagram logo. Since Compose, the graphic configuration is taken care by Canvas and Compose handles the creating and updating the objects if needed. Having all of this done in a central place has many benefits, like minimizing the amount of state in graphics and having all the options available in one place - in the composable.
@@ -863,7 +865,7 @@ When creating a Canvas, it automatically generates a DrawScope. This is an envir
 
 In the Heater App this is used to draw a custom circular slider in the middle of the screen. This slider is then used to set either the desired temperature of the van or the frequency, depending what is configured in the \lstinline!SettingScreen! mentioned in section \ref{navigation}.
 
-The circular slider is shown in figure \ref{circular_slider}
+The circular slider is shown in figure \ref{circular_slider}.
 
 \begin{figure}[!htbp]
 \centerline{\includegraphics[scale=0.55]{resources_qu/pictures/circular_slider.jpg}}
@@ -929,7 +931,7 @@ drawCircle(color = Color.Cyan, center = handleCenter, radius = 30f)
 }
 \end{lstlisting}
 
-This was an example that it is possible to achieve fairly complex things in Canvas, without too much coding, although some understanding of maths is required in this case.
+This was an example that it is possible to achieve fairly complex things in Canvas, without too much coding, although some understanding of maths is required in some cases.
 
 \section{Interoperability between traditional Android development and Jetpack Compose}\label{interop}
 Due to Jetpack Compose being a rather new technology, it is not feasible for all apps to be re-written overnight, or at all. Google's Android development team is fully aware of this and has therefore introduced the so-called interoperability APIs. This makes it possible to extend existing View-based android applications with Jetpack Compose composables and vice versa. For this purpose two APIs were developed, Compose in Views and Fragments in Compose.
@@ -942,27 +944,19 @@ The ComposeView API makes it possible to seamlessly integrate composable functio
 On the other side, there is the AndroidView composable. This makes it possible to integrate Android views into a compose application. This is particularly helpful, when pre-existing complex custom views have been created or when wanting to access UI elements, that are not available (yet) in Jetpack Compose \cite{InteropComposeXML}.
 \end{itemize}
 \section{Summary}
-This chapter gave a somewhat introductory comparison between the view based Android development paradigm and the declarative Jetpack Compose approach. It started with the fundamentals of traditional Android development, to be able to draw a comparison between it and Jetpack Compose. It explained what layouts and activities are and the concepts behind implementing a navigation system with multiple fragments. Finally, before diving into Jetpack Compose, a small example was shown where a button and animation were illustrated. \newline
+This chapter gave an introductory comparison between the view based Android development paradigm and the declarative Jetpack Compose approach. It started with the fundamentals of traditional Android development, to be able to draw a comparison between it and Jetpack Compose. It explained what layouts and activities are and the concepts behind implementing a navigation system with multiple fragments. Finally, before diving into Jetpack Compose, a small example was shown where a button and animation were illustrated. \newline
 
 The chapter then continued by giving a brief overview of the Jetpack Compose framework. For this purpose, a heater application was developed and used to showcase some functionalities of Jetpack Compose. It also illustrated, with some examples, what a Jetpack Compose app looks like and how easy it is to create simple apps with the new framework. By no means was this all that Jetpack Compose has to offer but it serves as a brief introduction.\newline
 
-\chapter{Conclusion}
-This thesis aimed to draw a broad comparison between traditional android development and the newly introduced framework Jetpack Compose. The comparison was not solely designed to showcase differences between modern and traditional approaches but was meant as a means to compare declarative and imperative UI development. The thesis started by creating a context for the modern-day smartphone market with a brief historic overview of the various phones that were introduced in the early 2000s. The first smartphone, that could be labelled as such, was Apple's iPhone with a closed source approach. Soon after Android was introduced and has been open source since the beginning. Over the years the Android market share exceeded Apple's and has dominated the market ever since. \newline
-After having established a historic context, a brief overview of multiple different imperative and declarative frameworks was given. For each framework, a small example code was given to illustrate what a listview would look like. With this overview, it was visible that the tendency for modern UI development approaches is going towards declarative approaches. Apple used to use AppKit and other imperative frameworks to develop their products and then moved to the declarative SwiftUI approach. The same goes for Android with the old XML based system and nowadays opting for the declarative Jetpack Compose system.\newline
-The main part of this thesis was the comparison between Jetpack Compose and the view-based Android approach to developing mobile applications. For this purpose, a small heater application was developed. First, the traditional Android app development system was superficially introduced. All major components to develop a simple app were touched upon and explained with some examples. This part was then concluded with an example of a button and a simple animation in XML. \newline After having established the status quo, the general architecture of Jetpack Compose was outlined. In order to have a context in which to illustrate Jetpack Compose, the heater app was introduced. For this, there were multiple different figures displaying the architecture and purpose of the app. This app was then used to illustrate some example features in Jetpack Compose in section \ref{jetpack_compose_gui}. This section started by explaining the basics of the declarative framework, such as composables - the modular UI blocks, which make up the UI. Furthermore, different concepts such as modifiers and state hoisting were explained in modest detail. The section went on by explaining how navigation and animations were on a basic level with an example. Finally, canvas, the library which allows the developer to draw anything on the screen, was introduced. This was illustrated with an example of a circular slider from the heater app. Before summing up the chapter and concluding the thesis, section \ref{interop} introduced an interoperability API. This API can be used to integrate XML based Android development into Compose and the other way around.\newline
-
-Summed up, Jetpack Compose has successfully managed to ease the UI development of Android applications. By writing all UI elements in Kotlin, it is easy to write a modular UI, which is easily extendible. Because of the declarative approach of simply having to call a button composable for example, it is fast to write a simple UI in a matter of minutes.
-
-
 \chapter{Future work}
-Because of the small scope of this paper, many things could not be addressed or implemented. Nevertheless, here are some potential ideas for further research on this topic:
+Because of the small scope of this thesis, many things could not be addressed or implemented. Nevertheless, here are some potential ideas for further research on this topic:
 
 \begin{enumerate}
 \item Implementing the microcontroller part of the heater app\newline
-This first point has nothing to do with Jetpack Compose but with the app developed for this thesis. Because of some complications, it was not possible to implement the microcontroller part of the heater app. This was due to measurement issues from the existing heating controller. Due to the heater and the controller having a feedback system, I could not differentiate between the signals being sent.
+This first point has nothing to do with Jetpack Compose but with the app developed for this thesis. Because of some complications, it was not possible to implement the microcontroller part of the heater app. This was due to measurement issues from the existing heating controller. Due to the heater and the controller having a feedback system, the author could not differentiate between the signals being sent.
 
 \item Maintenance comparisons between Jetpack Compose and XML based Android\newline
-It would be interesting to research how much effort it is to maintain an app written with both approaches. I would assume that, at least until Jetpack Compose is more stable, the declarative app would need more frequent maintenance. In this regard, it would interest me also, how easy it is to extend each app after several years of not having looked at the project. By this, I mean, which of the two apps would be faster to understand and to add new features to.
+It would be interesting to research how much effort it is to maintain an app written with both approaches. The author would assume that, at least until Jetpack Compose is more stable, the declarative app would need more frequent maintenance. In this regard, it would interest me also, how easy it is to extend each app after several years of not having looked at the project. By this is meant which of the two apps would be faster to understand and to add new features to.
 
 \item Performance Comparisons\newline
 A further area of research would be how resource demanding XML apps are in comparison to Jetpack Compose apps for the smartphone.
@@ -976,6 +970,18 @@ An interesting area would be to research if it were possible to automatically pa
 
 
 \newpage
+
+\chapter{Conclusion}
+This thesis aimed to draw a broad comparison between traditional android development and the newly introduced framework Jetpack Compose. The comparison was not solely designed to showcase differences between modern and traditional approaches but was meant as a means to compare declarative and imperative UI development. The thesis started by creating a context for the modern-day smartphone market with a brief historic overview of the various phones that were introduced in the early 2000s. The first smartphone, that could be labelled as such, was Apple's iPhone with a closed source approach. Soon after Android was introduced and has been open source since the beginning. Over the years the Android market share exceeded Apple's and has dominated the market ever since. \newline
+After having established a historic context, a brief overview of multiple different imperative and declarative frameworks was given. For each framework, a small example code was given to illustrate what a listview would look like. With this overview, it was visible that the tendency for modern UI development approaches is going towards declarative approaches. Apple used to use AppKit and other imperative frameworks to develop their products and then moved to the declarative SwiftUI approach. The same goes for Android with the old XML based system and nowadays opting for the declarative Jetpack Compose system.\newline
+The main part of this thesis was the comparison between Jetpack Compose and the view-based Android approach to developing mobile applications. For this purpose, a small heater application was developed. First, the traditional Android app development system was superficially introduced. All major components to develop a simple app were touched upon and explained with some examples. This part was then concluded with an example of a button and a simple animation in XML. \newline After having established the status quo, the general architecture of Jetpack Compose was outlined. In order to have a context in which to illustrate Jetpack Compose, the heater app was introduced. For this, there were multiple different figures displaying the architecture and purpose of the app. This app was then used to illustrate some example features in Jetpack Compose in section \ref{jetpack_compose_gui}. This section started by explaining the basics of the declarative framework, such as composables - the modular UI blocks, which make up the UI. Furthermore, different concepts such as modifiers and state hoisting were explained in modest detail. The section went on by explaining how navigation and animations were on a basic level with an example. Finally, canvas, the library which allows the developer to draw anything on the screen, was introduced. This was illustrated with an example of a circular slider from the heater app. Before summing up the chapter and concluding the thesis, section \ref{interop} introduced an interoperability API. This API can be used to integrate XML based Android development into Compose and the other way around.\newline
+
+
+
+Summed up, Jetpack Compose has successfully managed to ease the UI development of Android applications. By writing all UI elements in Kotlin, it is easy to write a modular UI, which is easily extendible. Because of the declarative approach of simply having to call a button composable for example, it is fast to write a simple UI in a matter of minutes. This does not mean, that it fixes all problems that existed previously, nor does it mean that it does not come with its own set of drawbacks. As mentioned in section \ref{navigation}, navigation is criticized by some Android developers. A benefit of imperative style programming regarding UI development is the customization factor. Because the developer needs to define almost every component from the ground up, it is easier to customize individual components. It can also be argued that a complete separation of UI and logic leads to better architecture, but this boils down to personal preference. 
+
+
+
 
 % --- Bibliography ------------------------------------------------------
 
